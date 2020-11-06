@@ -94,14 +94,14 @@ define Package/rtl8821ae-firmware/install
 endef
 $(eval $(call BuildPackage,rtl8821ae-firmware))
 
-Package/rtl8822be-firmware = $(call Package/firmware-default,RealTek RTL8822BE firmware)
+Package/rtl8822be-firmware = $(call Package/firmware-default,RealTek RTL8822BE/U firmware)
 define Package/rtl8822be-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware/rtw88
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/rtw88/rtw8822b_fw.bin $(1)/lib/firmware/rtw88
 endef
 $(eval $(call BuildPackage,rtl8822be-firmware))
 
-Package/rtl8822ce-firmware = $(call Package/firmware-default,RealTek RTL8822CE firmware)
+Package/rtl8822ce-firmware = $(call Package/firmware-default,RealTek RTL8822CE/U firmware)
 define Package/rtl8822ce-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware/rtw88
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/rtw88/rtw8822c_fw.bin $(1)/lib/firmware/rtw88
@@ -109,9 +109,9 @@ define Package/rtl8822ce-firmware/install
 endef
 $(eval $(call BuildPackage,rtl8822ce-firmware))
 
-Package/rtl8821ce-firmware = $(call Package/firmware-default,RealTek RTL8821CE firmware)
+Package/rtl8821ce-firmware = $(call Package/firmware-default,RealTek RTL8821CE/U firmware)
 define Package/rtl8821ce-firmware/install
 	$(INSTALL_DIR) $(1)/lib/firmware/rtw88
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/rtw88/rtw8821c_fw.bin $(1)/lib/firmware/rtw88
 endef
-$(eval $(call BuildPackage,rtl8822be-firmware))
+$(eval $(call BuildPackage,rtl8821ce-firmware))
